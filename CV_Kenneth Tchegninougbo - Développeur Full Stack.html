@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Tchegninougbo - Développeur Full Stack</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 2;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(78, 205, 196, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(78, 205, 196, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(78, 205, 196, 0); }
+        }
+        
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+        
+        .sidebar {
+            background: #f8f9fa;
+            padding: 40px;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.8rem;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-level {
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 4px;
+            animation: fillProgress 2s ease-out;
+        }
+        
+        @keyframes fillProgress {
+            0% { width: 0%; }
+        }
+        
+        .experience-item, .education-item, .project-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .experience-item::before, .education-item::before, .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+        
+        .experience-item:hover, .education-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .item-subtitle {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .item-date {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .interests {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .interest-item {
+            background: white;
+            padding: 20px 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .interest-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .interest-item i {
+            font-size: 2rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .print-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media print {
+            body { background: white; }
+            .cv-container { box-shadow: none; }
+            .print-btn { display: none; }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1 class="name">Kenneth TCHEGNINOUGBO</h1>
+            <h2 class="title">Développeur Full Stack Junior</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Cotonou, Bénin</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+229 01 90 13 65 67</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>kennethtchegninougbo2003@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Compétences Techniques -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-code"></i>
+                        Compétences Techniques
+                    </h3>
+                    <div class="skill-item">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">React</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Node.js / Express</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">HTML / CSS</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">MySQL</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Bootstrap</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Git</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies en Apprentissage -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-rocket"></i>
+                        Technologies en Cours
+                    </h3>
+                    <div class="skill-item" style="border-left-color: #ff6b6b;">
+                        <div class="skill-name" style="color: #ff6b6b;">Next.js</div>
+                        <small>Framework React pour le frontend</small>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #ff6b6b;">
+                        <div class="skill-name" style="color: #ff6b6b;">NestJS</div>
+                        <small>Framework Node.js pour le backend</small>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #ff6b6b;">
+                        <div class="skill-name" style="color: #ff6b6b;">GraphQL</div>
+                        <small>API moderne et flexible</small>
+                    </div>
+                    <div class="skill-item" style="border-left-color: #ff6b6b;">
+                        <div class="skill-name" style="color: #ff6b6b;">MongoDB</div>
+                        <small>Base de données NoSQL</small>
+                    </div>
+                </div>
+
+                <!-- Langues -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-globe"></i>
+                        Langues
+                    </h3>
+                    <div class="skill-item">
+                        <div class="skill-name">Français</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Anglais</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Fon (Langue maternelle)</div>
+                        <div class="skill-level">
+                            <div class="skill-progress" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outils -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-tools"></i>
+                        Outils & Logiciels
+                    </h3>
+                    <div class="skill-item">
+                        <div class="skill-name">Visual Studio Code</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Microsoft Office</div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">Font Awesome</div>
+                    </div>
+                </div>
+
+                <!-- Centres d'intérêt -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-heart"></i>
+                        Centres d'Intérêt
+                    </h3>
+                    <div class="interests">
+                        <div class="interest-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div>Programmation</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-basketball-ball"></i>
+                            <div>Basketball</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-book"></i>
+                            <div>Lecture</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-film"></i>
+                            <div>Cinéma</div>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-dragon"></i>
+                            <div>Mangas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+                <!-- Profil -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-user-circle"></i>
+                        Profil
+                    </h3>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #667eea;">
+                        Développeur web passionné de 21 ans, spécialisé dans le développement Full Stack moderne avec 
+                        <strong>React, Node.js, Express et MySQL</strong>. Je conçois des applications web complètes et performantes 
+                        avec des <strong>API REST sécurisées</strong>. Passionné par l'innovation, j'enrichis constamment mes compétences 
+                        avec les technologies émergentes (<strong>Next.js, NestJS, GraphQL, MongoDB</strong>) tout en développant 
+                        une expertise en <strong>cybersécurité</strong> et <strong>intelligence artificielle</strong> pour créer 
+                        des applications plus sécurisées et intelligentes. En recherche d'un <strong>stage de perfectionnement</strong> 
+                        pour approfondir ma maîtrise du développement web et explorer les synergies avec mes domaines d'intérêt.
+                    </p>
+                </div>
+
+                <!-- Expérience -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Projets & Expériences
+                    </h3>
+                    
+                    <div class="project-item">
+                        <h4 class="item-title">Plateforme E-commerce Full Stack</h4>
+                        <div class="item-date">Septembre 2025 - En cours</div>
+                        <p><strong>Contexte :</strong> Développement d'une plateforme e-commerce complète et moderne</p>
+                        <p><strong>Description :</strong> Conception et développement d'une application e-commerce full-featured incluant gestion des produits, système de panier, processus de commande, authentification utilisateur, panel administrateur et API REST complète.</p>
+                        <p><strong>Fonctionnalités :</strong></p>
+                        <ul>
+                            <li>Catalogue produits avec filtres et recherche avancée</li>
+                            <li>Système de panier et gestion des commandes</li>
+                            <li>Authentification et gestion des profils utilisateurs</li>
+                            <li>Panel d'administration pour la gestion des produits</li>
+                            <li>API REST sécurisée avec authentification JWT</li>
+                            <li>Interface responsive et intuitive</li>
+                        </ul>
+                        <p><strong>Architecture :</strong> Frontend React + Backend Express + Base de données MySQL</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h4 class="item-title">Application de Gestion de Tâches Full Stack</h4>
+                        <div class="item-date">Août 2025</div>
+                        <p><strong>Contexte :</strong> Projet personnel de développement d'une TodoList avancée</p>
+                        <p><strong>Description :</strong> Développement complet d'une application de gestion de tâches moderne incluant un système d'authentification JWT, CRUD complet des tâches, interface utilisateur responsive et API REST sécurisée.</p>
+                        <p><strong>Fonctionnalités :</strong></p>
+                        <ul>
+                            <li>Authentification et autorisation JWT</li>
+                            <li>Création, modification, suppression de tâches</li>
+                            <li>Interface utilisateur intuitive et responsive</li>
+                            <li>Gestion des sessions utilisateur</li>
+                            <li>API REST complète et sécurisée</li>
+                        </ul>
+                        <p><strong>Architecture :</strong> Frontend React + Backend Express + Base de données MySQL</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h4 class="item-title">Système d'Authentification Utilisateur</h4>
+                        <div class="item-subtitle">Projet Académique - Faculté de Natitingou</div>
+                        <div class="item-date">Juin - Juillet 2024</div>
+                        <p><strong>Description :</strong> Développement d'un système d'authentification pour une application de gestion de bibliothèque avec différenciation des rôles utilisateurs et accès personnalisé.</p>
+                        <p><strong>Réalisations :</strong></p>
+                        <ul>
+                            <li>Conception de l'architecture d'authentification</li>
+                            <li>Implémentation de la gestion des sessions</li>
+                            <li>Système de rôles et permissions</li>
+                            <li>Interface sécurisée et ergonomique</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Formation
+                    </h3>
+                    
+                    <div class="education-item">
+                        <h4 class="item-title">Licence en Mathématiques et Informatique</h4>
+                        <div class="item-subtitle">Faculté des Mathématiques et Informatiques - Natitingou</div>
+                        <div class="item-date">En cours (Bac+2 validé)</div>
+                        <p>Formation orientée vers les mathématiques appliquées et l'informatique fondamentale. Actuellement en reconversion vers les technologies web modernes.</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h4 class="item-title">Certification HTML, CSS, JavaScript</h4>
+                        <div class="item-subtitle">Formation pour Développeurs</div>
+                        <div class="item-date">2023</div>
+                        <p>Certification professionnelle couvrant les fondamentaux du développement web frontend et les bonnes pratiques de l'industrie.</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <h4 class="item-title">Baccalauréat</h4>
+                        <div class="item-subtitle">Complexe Scolaire Abbé Florent Nascimento - Cotonou</div>
+                        <div class="item-date">2021</div>
+                    </div>
+                </div>
+
+                <!-- Objectifs -->
+                <div class="section">
+                    <h3 class="section-title">
+                        <i class="fas fa-target"></i>
+                        Objectifs Professionnels
+                    </h3>
+                    <div style="background: linear-gradient(135deg, #667eea20, #764ba220); padding: 25px; border-radius: 15px; border-left: 5px solid #667eea;">
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            <strong>Court terme :</strong> Décrocher un stage de perfectionnement pour approfondir ma maîtrise du développement Full Stack et acquérir une première expérience professionnelle significative. Finaliser ma plateforme e-commerce et maîtriser <strong>Next.js</strong> et <strong>NestJS</strong>.
+                        </p>
+                        <br>
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            <strong>Moyen terme :</strong> Devenir expert en développement Full Stack moderne avec <strong>GraphQL</strong> et <strong>MongoDB</strong>, tout en développant des compétences en sécurisation d'applications web et intégration d'IA.
+                        </p>
+                        <br>
+                        <p style="font-size: 1.1rem; line-height: 1.8; margin: 0;">
+                            <strong>Long terme :</strong> Évoluer vers un profil de développeur expert combinant <strong>développement web avancé</strong>, <strong>cybersécurité applicative</strong> et <strong>intelligence artificielle</strong> pour créer des applications web sécurisées et intelligentes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animation d'apparition des éléments au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer tous les éléments avec animation
+        document.querySelectorAll('.skill-item, .experience-item, .education-item, .project-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Animation des barres de progression
+        setTimeout(() => {
+            document.querySelectorAll('.skill-progress').forEach(bar => {
+                bar.style.animation = 'fillProgress 2s ease-out forwards';
+            });
+        }, 500);
+    </script>
+</body>
+</html>
