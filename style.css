@@ -135,36 +135,59 @@ body {
   transform: scale(4)
 }
 
+.i1,.i2{
+  width:10%;
+}
+.height-h2{
+  width:90%;
+}
+.height-1{
+  height: 3rem;
+}
+.height-2{
+  height: 12rem;
+}
+.t1{
+  transform: translateY(-250px);
+}
+.t2{
+  transform: translateY(0px);
+}
+.ul-sm{
+  transition: all 1s ease;
+}
+.navbar-sm{
+  transition: all 1s ease;
+}
 
-@media(max-width:800px){
+
+@media (max-width: 575px) {
   .i1,.i2{
-    margin-left: 11.5rem;
-  }
-  .height-1{
-    height: 3rem;
-  }
-  .height-2{
-    height: 12rem;
-  }
-  .t1{
-    transform: translateY(-250px);
-  }
-  .t2{
-    transform: translateY(0px);
-  }
-  .ul-sm{
-    transition: all 1s ease;
-  }
-  .navbar-sm{
-    transition: all 1s ease;
+    margin-left: 2.6vw;
   }
 }
-@media(min-width:801px){
+
+/* Téléphone moyen*/
+@media (min-width: 576px) and (max-width: 767px) {
+  .i1,.i2{
+    margin-left: 40.8vw;
+  }
+}
+
+/* Tablette */
+@media (min-width: 768px) and (max-width: 991px) {
+  .i1,.i2{
+    margin-left: 52.7vw;
+  }
+}
+
+
+@media (min-width: 992px){
   div.div{
     margin-inline-start: 14rem;
   }
   .position{
-    position: absolute; top:0; right: 0; left:0; right:0;
+    position: absolute; top:0; left:0; right:0;
   }
   .overlay {
     opacity: 0;
@@ -187,10 +210,6 @@ body {
     transition: all 0.3s ease;
   }
   .button:hover {
-    cursor: pointer;
-  }
-  
-  .buton:hover {
     cursor: pointer;
   }
 }
