@@ -161,7 +161,14 @@ body {
 }
 
 
-@media (max-width: 575px) {
+@media (max-width: 300px) {
+  .height-h2{
+    font-size: 20px;
+  }
+}
+
+
+@media (min-width: 301px) and (max-width: 575px) {
   .i1,.i2{
     margin-left: 2.6vw;
   }
