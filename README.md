@@ -1,55 +1,16 @@
-# kenneth.dev
+# React + Vite
 
-> My personal corner of the internet — built with React & Tailwind
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-[![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)
+Currently, two official plugins are available:
 
-## ✨ Aperçu
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Portfolio personnel développé from scratch en React + Tailwind CSS, inspiré d'une maquette générée avec Google Stitch. Design dark minimaliste avec typographie agressive et animations subtiles.
+## React Compiler
 
-🔗 **Live** : [kennethdev.vercel.app](https://kennethdev.vercel.app)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🛠️ Stack
+## Expanding the ESLint configuration
 
-- **Framework** : React (Vite)
-- **Styling** : Tailwind CSS
-- **3D** : Three.js
-- **Animations** : CSS + Intersection Observer API
-- **Deploy** : Vercel
-
-## 🗂️ Structure
-
-```
-src/
-├── components/
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Stack.jsx
-│   ├── Projects.jsx
-│   └── Contact.jsx
-├── App.jsx
-└── main.jsx
-```
-
-## 🚀 Lancer le projet
-
-```bash
-# Cloner le repo
-git clone https://github.com/Dorovane/kenneth.dev.git
-
-# Installer les dépendances
-cd kenneth.dev
-npm install
-
-# Lancer en développement
-npm run dev
-```
-
-## 📄 Licence
-
-MIT © [Kenneth Tchegninougbo](https://github.com/Dorovane)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
