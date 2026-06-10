@@ -9,7 +9,7 @@
 
 ## ✨ Aperçu
 
-Portfolio personnel développé from scratch en React + Tailwind CSS, inspiré d'une maquette générée avec Google Stitch. Design dark minimaliste avec typographie agressive et animations subtiles.
+Portfolio personnel développé from scratch en React + Tailwind CSS. Design dark minimaliste avec typographie agressive et animations subtiles.
 
 🔗 **Live** : [kennethdev.vercel.app](https://kennethdev.vercel.app)
 
@@ -33,6 +33,7 @@ src/
 │   ├── Projects.jsx
 │   └── Contact.jsx
 ├── App.jsx
+|__ index.css
 └── main.jsx
 ```
 
@@ -40,7 +41,7 @@ src/
 
 ```bash
 # Cloner le repo
-git clone https://github.com/Dorovane/kenneth.dev.git
+git clone https://github.com/Dorovane/kenneth.dev
 
 # Installer les dépendances
 cd kenneth.dev
