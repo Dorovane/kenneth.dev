@@ -48,9 +48,9 @@ const About = () => {
             A propos de moi
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4">
-            Decouvrez{" "}
+            Tout sur{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Dorovane Dev
+              Dorovane 
             </span>
           </h2>
         </motion.div>
@@ -67,7 +67,7 @@ const About = () => {
               <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl p-1 rounded-2xl border border-white/10">
                 <img
                   src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Kenneth en train de coder"
+                  alt="En train de coder"
                   className="w-full h-[300px] sm:h-[400px] object-cover rounded-xl"
                 />
               </div>
@@ -80,7 +80,7 @@ const About = () => {
               >
                 <div className="text-center">
                   <p className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                    5+
+                    2+
                   </p>
                   <p className="text-gray-400 text-sm">Annees d'experience</p>
                 </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Heart, Code2 } from "lucide-react";
+import { Linkedin,Facebook ,Instagram, Github, Twitter, Heart, Code2 } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -33,15 +33,10 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="text-white font-semibold mb-4">Liens rapides</h4>
             <div className="flex flex-wrap justify-center gap-4">
-              {["A propos", "Competences", "Projets", "Contact"].map((link) => (
-                <a
-                  key={link}
-                  href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-                >
-                  {link}
-                </a>
-              ))}
+            <a href="#about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">A propos</a>
+            <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Competences</a>
+            <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Projets</a>
+            <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Contact</a>
             </div>
           </div>
 
@@ -52,6 +47,8 @@ const Footer = () => {
                 { icon: Github, href: "#", label: "GitHub" },
                 { icon: Linkedin, href: "#", label: "LinkedIn" },
                 { icon: Twitter, href: "#", label: "Twitter" },
+                { icon: Facebook, href: "#", label: "Twitter" },
+                { icon: Instagram, href: "#", label: "Twitter" },
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}

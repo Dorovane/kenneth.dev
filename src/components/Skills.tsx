@@ -121,12 +121,15 @@ const Skills = () => {
           ))}
         </div>
 
-        <motion.div
+        {
+          /*
+                  <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6"
         >
+          
           {[
             { value: "25+", label: "Projets realises" },
             { value: "50K+", label: "Lignes de code" },
@@ -150,6 +153,8 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+           */
+        }
       </div>
     </section>
   );

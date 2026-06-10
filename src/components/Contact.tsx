@@ -72,6 +72,8 @@ const Contact = () => {
 
     if (!validateForm()) return;
 
+    
+
     setIsSubmitting(true);
     setSubmitStatus(null);
 
@@ -98,20 +100,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "dorovane@example.com",
-      href: "mailto:dorovane@example.com",
+      value: "kennethtchegninougbo2003@gmail.com",
+      href: "mailto:kennethtchegninougbo2003@gmail.com",
     },
     {
       icon: Phone,
       title: "Telephone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+2290190136567",
+      href: "tel:+2290190136567",
     },
     {
       icon: MapPin,
       title: "Localisation",
       value: "Disponible partout",
-      href: "#",
+      href: "#contact",
     },
   ];
 

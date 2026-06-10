@@ -12,7 +12,7 @@ const Projects = () => {
       id="projects"
       ref={ref}
       className="relative py-20 sm:py-32 overflow-hidden"
-    >
+    > 
       <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent" />
 
@@ -123,7 +123,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <motion.a
-            href="#"
+            href="https://github.com/Dorovane/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-2 px-8 py-3 text-cyan-400 border border-cyan-500/30 rounded-xl hover:bg-cyan-500/10 transition-colors font-medium"

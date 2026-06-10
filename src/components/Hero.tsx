@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin ,Facebook} from "lucide-react";
 
 const roles = [
   "Developpeur Web Full-Stack",
-  "Passionne par React",
+  "Developpeur mobile",
+  "Passionné par React",
   "Probleme Solver",
   "Artisan du Code",
 ];
@@ -92,7 +93,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src="../../IMG-20260212-WA0000.jpg"
                 alt="Kenneth Tchegninougbo"
                 className="w-full h-full object-cover"
               />
@@ -119,7 +120,7 @@ const Hero = () => {
         >
           <span className="text-white">Salut, je suis </span>
           <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-            Kenneth
+            Dorovane
           </span>
         </motion.h1>
 
@@ -129,9 +130,9 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="mb-6"
         >
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium">
-            aussi connu sous le nom de{" "}
-            <span className="text-cyan-400 font-semibold">Dorovane Dev</span>
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-400 font-medium mt-4 text-3xl">
+            Bienvenu(e)s dans le monde de {" "}
+            <span className="text-cyan-400 font-semibold">Kenneth TCHEGNINOUGBO</span>
           </p>
         </motion.div>
 
@@ -188,9 +189,9 @@ const Hero = () => {
           className="flex justify-center gap-4"
         >
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Twitter, href: "#", label: "Twitter" },
+            { icon: Github, href: "https://github.com/Dorovane/", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.likedin.com/in/kenneth-tchegniougbo-59201a30b", label: "LinkedIn" },
+            { icon: Facebook, href: "#", label: "Facebook" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}
