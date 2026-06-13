@@ -125,6 +125,12 @@ const Contact = () => {
       value: "Disponible partout",
       href: "#contact",
     },
+    {
+      icon: Phone,
+      title: "Whatsapp",
+      value: "+22958300749",
+      href: "https://wa.me/+22958300749",
+    }
   ];
 
   return (
@@ -168,6 +174,8 @@ const Contact = () => {
             <div className="space-y-4">
               {contactInfo.map((item, index) => (
                 <motion.a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={item.title}
                   href={item.href}
                   initial={{ opacity: 0, y: 20 }}

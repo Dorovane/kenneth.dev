@@ -52,6 +52,7 @@ const Footer = () => {
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
                   target="_blank"
+                  rel="noopener noreferrer"
                   key={label}
                   href={href}
                   whileHover={{ scale: 1.1, y: -2 }}

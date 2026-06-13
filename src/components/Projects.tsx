@@ -93,6 +93,7 @@ const Projects = () => {
                   <div className="flex gap-3">
                     <motion.a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href={project.liveUrl}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -103,6 +104,7 @@ const Projects = () => {
                     </motion.a>
                     <motion.a
                       target="_blank"
+                      rel="noopener noreferrer"
                       href={project.githubUrl}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -125,6 +127,7 @@ const Projects = () => {
           className="text-center mt-12"
         >
           <motion.a
+            target="_blan"
             href="https://github.com/Dorovane/"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
