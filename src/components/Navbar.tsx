@@ -22,12 +22,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-    setIsMobileMenuOpen(false);
+    
+    setIsMobileMenuOpen(false); // fermeture immédiate, sans attendre
+    
+    // On laisse le temps au DOM de se mettre à jour (menu fermé) avant de scroller
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        element?.scrollIntoView({ behavior: "smooth" });
+      });
+    });
   };
 
   return (

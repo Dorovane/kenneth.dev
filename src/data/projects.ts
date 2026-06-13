@@ -50,3 +50,4 @@ export const projects: Project[] = [
     category: "Full-Stack",
   },
 ];
+/**    setTimeout(()=>{setIsMobileMenuOpen(false)},500) */
