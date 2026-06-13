@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin ,Facebook} from "lucide-react";
+import moiPhoto from '../../moi.jpg';
 
 const roles = [
   "Developpeur Web Full-Stack",
@@ -93,7 +94,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
               <img
-                src="../../moi.jpg"
+                src={moiPhoto}
                 alt="Kenneth Tchegninougbo"
                 className="w-full h-full object-cover"
               />

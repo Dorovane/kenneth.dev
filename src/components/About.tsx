@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Code, Globe, Heart } from "lucide-react";
+import coding from "../../coding.jpg"
 
 const highlights = [
   {
@@ -66,7 +67,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-3xl opacity-20" />
               <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl p-1 rounded-2xl border border-white/10">
                 <img
-                  src="../../coding.jpg"
+                  src={coding}
                   alt="En train de coder"
                   className="w-full h-[300px] sm:h-[400px] object-cover rounded-xl"
                 />

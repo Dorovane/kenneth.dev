@@ -1,3 +1,9 @@
+import photo1 from "../../img/calculatrice.jpeg"
+import photo2 from "../../img/pomodoro.png"
+import photo3 from "../../img/todolist.jpeg"
+
+
+
 export interface Project {
   id: number;
   title: string;
@@ -15,7 +21,7 @@ export const projects: Project[] = [
     title: "CloudSync Dashboard",
     description:
       "Une plateforme de surveillance d'infrastructure cloud en temps reel avec des mesures en direct, des alertes automatisees et des visualisations intuitives. Construit avec React, Node.js et WebSocket pour des mises a jour en temps reel.",
-    image: "../../img/calculatrice.jpeg",
+    image: photo1,
     technologies: ["React", "TypeScript", "Node.js", "WebSocket", "PostgreSQL", "Docker"],
     liveUrl: "#",
     githubUrl: "#",
@@ -26,7 +32,7 @@ export const projects: Project[] = [
     title: "FinTrack Pro",
     description:
       "Une application complete de gestion des finances personnelles avec suivi des depenses, planification budgetaire et analyses financieres alimentees par IA. API GraphQL avec synchronisation en temps reel.",
-    image: "../../img/pomodoro.png",
+    image: photo2,
     technologies: ["React", "GraphQL", "NestJS", "MongoDB", "Tailwind CSS", "Chart.js"],
     liveUrl: "#",
     githubUrl: "#",
@@ -37,7 +43,7 @@ export const projects: Project[] = [
     title: "CodeCollab Hub",
     description:
       "Une plateforme collaborative de revision de code pour les equipes de developpement avec edition en temps reel, coloration syntaxique et appels video integres. Supporte plusieurs langages et frameworks.",
-    image: "../../img/todolist.jpeg",
+    image: photo3,
     technologies: ["React", "Express", "Socket.io", "Redis", "Bootstrap", "Docker"],
     liveUrl: "#",
     githubUrl: "#",
