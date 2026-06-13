@@ -33,10 +33,10 @@ const Footer = () => {
           <div className="text-center">
             <h4 className="text-white font-semibold mb-4">Liens rapides</h4>
             <div className="flex flex-wrap justify-center gap-4">
-            <a href="#about" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">A propos</a>
-            <a href="#skills" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Competences</a>
-            <a href="#projects" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Projets</a>
-            <a href="#contact" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Contact</a>
+            <a href="#about" className="text-gray-400 lg:hover:text-cyan-400 transition-colors text-sm">A propos</a>
+            <a href="#skills" className="text-gray-400 lg:hover:text-cyan-400 transition-colors text-sm">Competences</a>
+            <a href="#projects" className="text-gray-400 lg:hover:text-cyan-400 transition-colors text-sm">Projets</a>
+            <a href="#contact" className="text-gray-400 lg:hover:text-cyan-400 transition-colors text-sm">Contact</a>
             </div>
           </div>
 
@@ -44,13 +44,14 @@ const Footer = () => {
             <h4 className="text-white font-semibold mb-4">Suivez-moi</h4>
             <div className="flex justify-center md:justify-end gap-3">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Twitter, href: "#", label: "Twitter" },
-                { icon: Facebook, href: "#", label: "Twitter" },
-                { icon: Instagram, href: "#", label: "Twitter" },
+                { icon: Github, href: "https://github.com/Dorovane/", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/kenneth-tchegninougbo-59201a30b/", label: "LinkedIn" },
+                { icon: Twitter, href: "https://x.com/Dorovane2003", label: "Twitter" },
+                { icon: Facebook, href: "https://web.facebook.com/dorovane24", label: "Facebook" },
+                { icon: Instagram, href: "https://www.instagram.com/dorovane_?igsh=MTBhNW1iZm5wMm5hbQ==", label: "Instagram" },
               ].map(({ icon: Icon, href, label }) => (
                 <motion.a
+                  target="_blank"
                   key={label}
                   href={href}
                   whileHover={{ scale: 1.1, y: -2 }}

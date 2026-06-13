@@ -66,7 +66,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-3xl opacity-20" />
               <div className="relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl p-1 rounded-2xl border border-white/10">
                 <img
-                  src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="../../coding.jpg"
                   alt="En train de coder"
                   className="w-full h-[300px] sm:h-[400px] object-cover rounded-xl"
                 />

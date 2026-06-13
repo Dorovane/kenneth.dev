@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github } from "lucide-react";
-import { projects } from "../data/projects";
+import { projects } from "../data/projects"; 
 
 const Projects = () => {
   const ref = useRef(null);
@@ -92,6 +92,7 @@ const Projects = () => {
 
                   <div className="flex gap-3">
                     <motion.a
+                      target="_blank"
                       href={project.liveUrl}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -101,6 +102,7 @@ const Projects = () => {
                       Demo
                     </motion.a>
                     <motion.a
+                      target="_blank"
                       href={project.githubUrl}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

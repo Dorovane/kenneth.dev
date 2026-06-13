@@ -93,7 +93,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
             <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
               <img
-                src="../../IMG-20260212-WA0000.jpg"
+                src="../../moi.jpg"
                 alt="Kenneth Tchegninougbo"
                 className="w-full h-full object-cover"
               />
@@ -190,10 +190,11 @@ const Hero = () => {
         >
           {[
             { icon: Github, href: "https://github.com/Dorovane/", label: "GitHub" },
-            { icon: Linkedin, href: "https://www.likedin.com/in/kenneth-tchegniougbo-59201a30b", label: "LinkedIn" },
-            { icon: Facebook, href: "#", label: "Facebook" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/kenneth-tchegninougbo-59201a30b/", label: "LinkedIn" },
+            { icon: Facebook, href: "https://web.facebook.com/dorovane24", label: "Facebook" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
+              target="_blank"
               key={label}
               href={href}
               whileHover={{ scale: 1.2, y: -3 }}
