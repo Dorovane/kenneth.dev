@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Send, Mail, MapPin, Phone, CheckCircle, AlertCircle } from "lucide-react";
+import emailjs from "@emailjs/browser"
 
 interface FormData {
   name: string;
@@ -72,8 +73,17 @@ const Contact = () => {
 
     if (!validateForm()) return;
 
-    
-
+    emailjs.send(
+      "service_qkb4v5m",
+      "template_186h5wm",
+      {
+        name:formData.name,
+        title:formData.subject,
+        email:formData.email,
+        message:formData.message
+      },
+      "6uOfUSGIBzPhLY-dc"
+    )
     setIsSubmitting(true);
     setSubmitStatus(null);
 
